@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prime Pet Family complete and balanced cat and dog food, made for happy pets at every life stage.">
+  <meta name="theme-color" content="#073b82">
+  <title>Prime Pet Family | Better bowls. Brighter days.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">
+    <span class="ownership-message"><img class="cambodia-flag" src="assets/cambodia-flag.svg" alt="Flag of Cambodia">Proudly Cambodian-owned — made with care for cats &amp; dogs</span>
+    <a href="mailto:info@primepetfamily.com">info@primepetfamily.com</a>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Prime Pet Family home">
+      <img src="assets/prime-logo.jpg" alt="Prime">
+      <span>Pet Family</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Open navigation</span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="#products">Our food</a>
+      <a href="#why-prime">Why Prime</a>
+      <a href="#feeding">Feeding guide</a>
+      <a href="knowledge.html">Pet care</a>
+      <a href="#story">Our story</a>
+      <button class="button button-small button-gold js-open-inquiry" type="button" data-product="General product enquiry">Find Prime</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">One family. Every life stage.</p>
+        <h1 id="hero-title">Better bowls.<br><em>Brighter days.</em></h1>
+        <p class="hero-copy">Complete, balanced recipes created for the cats and dogs who make every house feel like home.</p>
+        <div class="hero-actions">
+          <a class="button button-blue" href="#products">Explore our food</a>
+          <a class="text-link" href="#why-prime">Why families choose Prime <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-proof" aria-label="Product highlights">
+          <div><strong>Complete</strong><span>daily nutrition</span></div>
+          <div><strong>All stages</strong><span>kitten to adult</span></div>
+          <div><strong>Three ranges</strong><span>classic, canned &amp; freeze-dried</span></div>
+        </div>
+      </div>
+      <p class="image-note">Lifestyle image created for Prime Pet Family</p>
+    </section>
+
+    <section class="trust-bar" aria-label="Prime benefits">
+      <div><span class="trust-icon">♡</span><span><strong>Heart &amp; vision</strong> thoughtful everyday support</span></div>
+      <div><span class="trust-icon">✦</span><span><strong>Healthy skin &amp; coat</strong> nutrients that help pets shine</span></div>
+      <div><span class="trust-icon">◉</span><span><strong>Balanced nutrition</strong> made for daily feeding</span></div>
+    </section>
+
+    <section class="section products-section" id="products" aria-labelledby="products-title">
+      <div class="section-heading heading-row">
+        <div>
+          <p class="eyebrow">Pick their Prime</p>
+          <h2 id="products-title">Good food for every member of the family.</h2>
+        </div>
+        <p>From playful kittens to picky dogs, discover recipes and pack sizes made to fit real family life.</p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter products">
+        <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All food</button>
+        <button class="filter-button" type="button" data-filter="cat" aria-pressed="false">For cats</button>
+        <button class="filter-button" type="button" data-filter="dog" aria-pressed="false">For dogs</button>
+        <button class="filter-button" type="button" data-filter="canned" aria-pressed="false">Canned food</button>
+        <button class="filter-button" type="button" data-filter="freeze" aria-pressed="false">Freeze-dried boost</button>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card product-card-blue" data-categories="cat classic">
+          <div class="product-image-wrap">
+            <span class="product-badge">Classic recipe</span>
+            <img src="assets/prime-cat-1kg-web.png" alt="Prime Cat Ocean Fish and Chicken 1 kilogram bag" loading="lazy">
+          </div>
+          <div class="product-body">
+            <p class="product-pet">Prime Cat</p>
+            <h3>Ocean Fish &amp; Chicken</h3>
+            <p>Two-colour kibble with complete, balanced nutrition for kittens and adult cats.</p>
+            <div class="product-footer">
+              <span class="size-pill">1 kg</span>
+              <a class="card-link" href="product.html?id=cat-classic">View details <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card-sky" data-categories="cat classic">
+          <div class="product-image-wrap range-image">
+            <span class="product-badge">Family sizes</span>
+            <img src="assets/prime-cat-range-web.png" alt="Prime Cat Ocean Fish and Chicken bags in 1, 10 and 20 kilogram sizes" loading="lazy">
+          </div>
+          <div class="product-body">
+            <p class="product-pet">Prime Cat</p>
+            <h3>Everyday Family Range</h3>
+            <p>The same ocean fish and chicken recipe in convenient sizes for one cat or a whole crew.</p>
+            <div class="product-footer">
+              <span class="size-pill">1 / 10 / 20 kg</span>
+              <a class="card-link" href="product.html?id=cat-family">View details <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card-cream" data-categories="cat freeze">
+          <div class="product-image-wrap dual-product">
+            <span class="product-badge">Freeze-dried boost</span>
+            <img src="assets/prime-cat-freeze-1-5kg-web.png" alt="Prime Cat Salmon and Chicken Freeze-Dried Boost 1.5 kilogram bag" loading="lazy">
+            <img src="assets/prime-cat-freeze-5kg-web.png" alt="Prime Cat Salmon and Chicken Freeze-Dried Boost 5 kilogram bag" loading="lazy">
+          </div>
+          <div class="product-body">
+            <p class="product-pet">Prime Cat</p>
+            <h3>Salmon &amp; Chicken</h3>
+            <p>Crunchy kibble with freeze-dried chicken and egg yolk pieces, plus salmon oil and probiotics.</p>
+            <div class="product-footer">
+              <span class="size-pill">1.5 / 5 kg</span>
+              <a class="card-link" href="product.html?id=cat-freeze">View details <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card-dog" data-categories="dog freeze">
+          <div class="product-image-wrap range-image">
+            <span class="product-badge">For picky dogs</span>
+            <img src="assets/prime-dog-range-web.png" alt="Prime Dog Beef and Chicken Freeze-Dried Series bags in 2.5 and 10 kilogram sizes" loading="lazy">
+          </div>
+          <div class="product-body">
+            <p class="product-pet">Prime Dog</p>
+            <h3>Beef &amp; Chicken</h3>
+            <p>A freeze-dried series recipe with vegetables, fish oil and an irresistible flavour for puppies and adults.</p>
+            <div class="product-footer">
+              <span class="size-pill">2.5 / 10 kg</span>
+              <a class="card-link" href="product.html?id=dog-freeze">View details <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card product-card-canned" data-categories="cat canned">
+          <div class="product-image-wrap range-image">
+            <span class="product-badge">Premium canned food</span>
+            <img src="assets/prime-cat-cans-web.png" alt="Prime Cat premium canned food in Chicken, Salmon, Tuna and Seafood flavors" loading="lazy">
+          </div>
+          <div class="product-body">
+            <p class="product-pet">Prime Cat</p>
+            <h3>Premium Canned Collection</h3>
+            <p>Real-meat recipes for kittens, adults and seniors. Serve as a tempting meal or add to dry food as a flavorful topper.</p>
+            <div class="canned-flavours" aria-label="Available flavors">
+              <span>Chicken</span><span>Salmon</span><span>Tuna</span><span>Seafood</span>
+            </div>
+            <div class="product-footer">
+              <span class="size-pill">4 flavors</span>
+              <a class="card-link" href="product.html?id=cat-canned">View details <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="filter-empty" id="filter-empty" hidden>No products match this filter yet.</p>
+    </section>
+
+    <section class="feature-story" id="why-prime" aria-labelledby="feature-title">
+      <div class="feature-visual">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <img class="bowl-image" src="assets/cat-food-bowl-web.png" alt="A white cat-shaped bowl filled with Prime Cat kibble" loading="lazy">
+        <div class="ingredient-chip chip-one">Ocean fish</div>
+        <div class="ingredient-chip chip-two">Chicken</div>
+        <div class="ingredient-chip chip-three">Daily balance</div>
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">What’s inside matters</p>
+        <h2 id="feature-title">Nutrition they need. A taste they’ll race home for.</h2>
+        <p>Prime recipes bring together animal proteins, supportive nutrients and carefully selected ingredients in a satisfying everyday meal.</p>
+        <ul class="check-list">
+          <li><span>01</span><div><strong>Complete &amp; balanced</strong><small>Designed as a dependable daily diet.</small></div></li>
+          <li><span>02</span><div><strong>Support from nose to tail</strong><small>Selected nutrients for skin, coat, eyes, heart and immunity.</small></div></li>
+          <li><span>03</span><div><strong>Made for real appetites</strong><small>Flavours and textures cats and dogs can look forward to.</small></div></li>
+        </ul>
+        <a class="text-link text-link-blue" href="#feeding">See the feeding guide <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section range-spotlight" aria-labelledby="range-title">
+      <div class="spotlight-copy">
+        <p class="eyebrow">Freeze-dried series</p>
+        <h2 id="range-title">A little extra joy in every crunch.</h2>
+        <p>Prime’s freeze-dried boost pairs everyday kibble with tempting pieces of real ingredients. Cat and dog recipes each have their own nutritional story.</p>
+        <div class="stat-grid">
+          <div><strong>6B</strong><span>CFU/kg probiotics in selected recipes</span></div>
+          <div><strong>61%</strong><span>real meat claim on Prime Dog Freeze-Dried</span></div>
+          <div><strong>Ω 3+6</strong><span>fish oil support in selected recipes</span></div>
+        </div>
+        <small class="claim-note">Claims shown are specific to the formulas and packaging pictured. Always check the pack for full details.</small>
+      </div>
+      <div class="spotlight-visual">
+        <div class="kibble-card">
+          <img src="assets/freeze-dried-kibble-web.jpg" alt="Prime freeze-dried dog food kibble in a wooden bowl" loading="lazy">
+          <span>Crunch + freeze-dried pieces</span>
+        </div>
+        <img class="dog-range-image" src="assets/prime-dog-range-web.png" alt="Prime Dog freeze-dried series family pack sizes" loading="lazy">
+      </div>
+    </section>
+
+    <section class="feeding-section" id="feeding" aria-labelledby="feeding-title">
+      <div class="section-heading centered">
+        <p class="eyebrow">A gentle change</p>
+        <h2 id="feeding-title">Help their tummy meet something new.</h2>
+        <p>Introduce Prime gradually over seven days. Keep fresh water nearby and use the feeding guide on your specific pack.</p>
+      </div>
+      <div class="transition-track" role="list" aria-label="Seven day feeding transition">
+        <div class="transition-step" role="listitem">
+          <div class="bowl-chart"><span style="--new-food:25%"></span></div>
+          <strong>Days 1–2</strong><small>25% Prime</small>
+        </div>
+        <div class="transition-line"></div>
+        <div class="transition-step" role="listitem">
+          <div class="bowl-chart"><span style="--new-food:50%"></span></div>
+          <strong>Days 3–4</strong><small>50% Prime</small>
+        </div>
+        <div class="transition-line"></div>
+        <div class="transition-step" role="listitem">
+          <div class="bowl-chart"><span style="--new-food:75%"></span></div>
+          <strong>Days 5–6</strong><small>75% Prime</small>
+        </div>
+        <div class="transition-line"></div>
+        <div class="transition-step" role="listitem">
+          <div class="bowl-chart"><span style="--new-food:100%"></span></div>
+          <strong>Day 7</strong><small>100% Prime</small>
+        </div>
+      </div>
+      <p class="feeding-note">Every pet is different. Slow down the transition if your pet seems uncomfortable, and ask your veterinarian for personal feeding advice.</p>
+    </section>
+
+    <section class="section knowledge-preview" aria-labelledby="knowledge-preview-title">
+      <div class="section-heading heading-row">
+        <div><p class="eyebrow">Prime Pet Family knowledge</p><h2 id="knowledge-preview-title">Care gets easier when the next step is clear.</h2></div>
+        <div><p>Illustrated guides for kittens, mother cats, puppies, nutrition, hydration and everyday healthy routines.</p><a class="text-link text-link-blue" href="knowledge.html">Explore all 9 guides <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="knowledge-preview-grid">
+        <a class="knowledge-preview-card" href="knowledge.html#baby-kitten"><img src="assets/care-kittens.jpg" alt="Three baby kittens resting in a warm nest" loading="lazy"><div><span>Kitten care · 6 min</span><h3>How to care for a baby kitten</h3><p>Warmth, nursing, growth checks and the signs that need help.</p><strong>Read the guide →</strong></div></a>
+        <a class="knowledge-preview-card" href="knowledge.html#canned-food"><img src="assets/detail-cat-wet.jpg" alt="Silver tabby cat beside a dish of moist food" loading="lazy"><div><span>Nutrition · 5 min</span><h3>Why canned food can matter</h3><p>Moisture, appetite, labels and how Prime cans can fit the bowl.</p><strong>Read the guide →</strong></div></a>
+        <a class="knowledge-preview-card" href="knowledge.html#new-puppy"><img src="assets/care-puppy.jpg" alt="Golden retriever puppy in a safe home care area" loading="lazy"><div><span>Dog care · 6 min</span><h3>Your puppy’s calm first week</h3><p>A safe zone, simple schedule and gentle early experiences.</p><strong>Read the guide →</strong></div></a>
+      </div>
+    </section>
+
+    <section class="section story-section" id="story" aria-labelledby="story-title">
+      <div class="story-image">
+        <img src="assets/prime-cat-packaging-details-web.jpg" alt="Prime Cat packaging artwork showing recipe details and feeding information" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <p class="eyebrow">From our family to yours</p>
+        <h2 id="story-title">Made by people who understand the assignment: love them well.</h2>
+        <p><strong>Prime Pet Family is proudly Cambodian-owned.</strong> As more Cambodian families choose to support homegrown businesses, Prime offers a trusted local choice for the pets they love.</p>
+        <p>Our story started with a simple belief: pets deserve food made with the same care families bring to everything else in their lives.</p>
+        <p>That means practical pack sizes, clear feeding guidance and recipes designed around complete nutrition and happy mealtimes.</p>
+        <div class="quality-row" aria-label="Quality commitments">
+          <span class="local-brand-badge"><img class="cambodia-flag cambodia-flag-small" src="assets/cambodia-flag.svg" alt="">Cambodian-owned brand</span>
+          <span>Carefully selected ingredients</span>
+          <span>Clear pack guidance</span>
+          <span>Quality-focused production</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" aria-labelledby="faq-title">
+      <div class="section-heading heading-row">
+        <div><p class="eyebrow">Good questions</p><h2 id="faq-title">Before you fill the bowl.</h2></div>
+        <p>Quick answers for a confident start. For exact quantities and ingredients, always check your chosen pack.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Which Prime recipe is right for my pet?<span>+</span></summary>
+          <p>Choose the cat or dog range, then match the life-stage and flavour information on the pack. If your pet has a medical condition or special diet, consult your veterinarian first.</p>
+        </details>
+        <details>
+          <summary>How quickly should I change foods?<span>+</span></summary>
+          <p>A seven-day transition works well for many pets: gradually increase Prime while reducing the previous food. Sensitive pets may need a little longer.</p>
+        </details>
+        <details>
+          <summary>How should I store Prime food?<span>+</span></summary>
+          <p>Keep the food sealed in a cool, dry place, away from direct sunlight and moisture. Reseal tightly after opening to help maintain freshness.</p>
+        </details>
+        <details>
+          <summary>Where can I buy Prime?<span>+</span></summary>
+          <p>Use the enquiry button below and tell us your location and preferred recipe. The Prime Pet Family team can help point you in the right direction.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div>
+        <p class="eyebrow">Ready for a happier bowl?</p>
+        <h2 id="cta-title">Find the Prime fit for your family.</h2>
+      </div>
+      <button class="button button-light js-open-inquiry" type="button" data-product="Help me choose a Prime recipe">Help me choose</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand brand-footer" href="#top"><img src="assets/prime-logo.jpg" alt=""><span>Pet Family</span></a>
+      <p>Complete nutrition for the cats and dogs who make us a family.</p>
+    </div>
+    <div>
+      <strong>Explore</strong>
+      <a href="#products">Our food</a>
+      <a href="#why-prime">Why Prime</a>
+      <a href="#feeding">Feeding guide</a>
+      <a href="knowledge.html">Pet-care knowledge</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <a href="mailto:info@primepetfamily.com">info@primepetfamily.com</a>
+      <a href="https://www.primepetfamily.com">primepetfamily.com</a>
+    </div>
+    <div class="footer-note">
+      <strong>Prime care note</strong>
+      <p>Product information can change. Refer to your pack for current ingredients, analysis and feeding guidance.</p>
+    </div>
+    <div class="copyright"><span>© <span id="year"></span> Prime Pet Family</span><span>Made for good days together.</span></div>
+  </footer>
+
+  <dialog class="inquiry-dialog" id="inquiry-dialog" aria-labelledby="inquiry-title">
+    <button class="dialog-close" type="button" aria-label="Close enquiry">×</button>
+    <div class="dialog-mark">PRIME</div>
+    <p class="eyebrow">Let’s find their food</p>
+    <h2 id="inquiry-title">Ask about Prime</h2>
+    <p>Send the Prime team a ready-to-go email with your pet and product details.</p>
+    <form id="inquiry-form">
+      <label for="product-interest">Product</label>
+      <input id="product-interest" name="product" type="text" readonly>
+      <div class="form-row">
+        <div>
+          <label for="pet-type">Pet</label>
+          <select id="pet-type" name="pet">
+            <option>Cat</option>
+            <option>Dog</option>
+            <option>Both</option>
+          </select>
+        </div>
+        <div>
+          <label for="pet-age">Life stage</label>
+          <select id="pet-age" name="stage">
+            <option>Kitten / Puppy</option>
+            <option selected>Adult</option>
+            <option>Senior</option>
+          </select>
+        </div>
+      </div>
+      <label for="location">Your location</label>
+      <input id="location" name="location" type="text" placeholder="City or region" required>
+      <label for="message">Anything else?</label>
+      <textarea id="message" name="message" rows="3" placeholder="Preferred pack size, number of pets, questions…"></textarea>
+      <button class="button button-blue button-full" type="submit">Create email enquiry</button>
+      <small>This opens your email app. No information is stored on this page.</small>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email enquiry prepared.</div>
+</body>
+</html>
