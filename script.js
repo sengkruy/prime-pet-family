@@ -11,9 +11,10 @@
   var enquiryForm = document.getElementById("inquiry-form");
   var closeDialogButton = document.querySelector(".dialog-close");
   var toast = document.getElementById("toast");
+  var year = document.getElementById("year");
   var lastTrigger = null;
 
-  document.getElementById("year").textContent = new Date().getFullYear();
+  if (year) year.textContent = new Date().getFullYear();
 
   function closeMenu() {
     menuToggle.setAttribute("aria-expanded", "false");
@@ -98,7 +99,7 @@
     if (!enquiryForm.reportValidity()) return;
 
     var formData = new FormData(enquiryForm);
-    var subject = "Prime Pet Family enquiry — " + formData.get("product");
+    var subject = "Prime Pet Family enquiry - " + formData.get("product");
     var body = [
       "Hello Prime Pet Family,",
       "",
@@ -113,7 +114,9 @@
     ].join("\n");
 
     toast.classList.add("show");
-    window.setTimeout(function () { toast.classList.remove("show"); }, 2600);
+    window.setTimeout(function () {
+      toast.classList.remove("show");
+    }, 2600);
     window.location.href = "mailto:info@primepetfamily.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   });
 
