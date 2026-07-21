@@ -3,7 +3,60 @@
   var menuToggle = document.querySelector(".menu-toggle");
   var navigation = document.getElementById("primary-nav");
   var year = document.getElementById("year");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (year) year.textContent = new Date().getFullYear();
+
+  function assignReveal(selector, effect, step) {
+    document.querySelectorAll(selector).forEach(function (element, index) {
+      element.setAttribute("data-reveal", effect || "up");
+      if (step) element.style.setProperty("--reveal-delay", (index * step) + "ms");
+    });
+  }
+
+  function initScrollReveal() {
+    var items = document.querySelectorAll("[data-reveal]");
+    if (!items.length) return;
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      items.forEach(function (item) { item.classList.add("is-visible"); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -10% 0px" });
+    items.forEach(function (item) { observer.observe(item); });
+  }
+
+  function initParallax() {
+    var items = document.querySelectorAll("[data-parallax]");
+    if (!items.length || prefersReducedMotion) return;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var viewportHeight = window.innerHeight || 1;
+      items.forEach(function (item) {
+        var rect = item.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > viewportHeight) return;
+        var center = rect.top + (rect.height / 2);
+        var distance = (center - viewportHeight / 2) / viewportHeight;
+        item.style.setProperty("--parallax-y", (distance * -18).toFixed(2) + "px");
+      });
+    }
+
+    function queue() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    update();
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+  }
 
   var guideVisuals = {
     "baby-kitten": {
@@ -170,6 +223,22 @@
       connection.insertBefore(image, connection.firstChild);
     }
   });
+
+  assignReveal(".knowledge-hero-copy", "soft");
+  assignReveal(".topic-jump a", "up", 40);
+  assignReveal(".knowledge-intro > *", "soft", 80);
+  assignReveal(".spotlight-card", "up", 70);
+  assignReveal(".knowledge-article", "soft", 60);
+  assignReveal(".article-body > *", "soft", 40);
+  assignReveal(".knowledge-sources", "soft");
+  assignReveal(".site-footer > div:not(.copyright)", "soft", 50);
+
+  document.querySelectorAll(".knowledge-hero > img, .spotlight-card img, .article-image img, .connection-pack").forEach(function (image) {
+    image.setAttribute("data-parallax", "");
+  });
+
+  initScrollReveal();
+  initParallax();
 
   if (!menuToggle || !navigation) return;
   menuToggle.addEventListener("click", function () {

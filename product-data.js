@@ -420,6 +420,7 @@
   var menuToggle = document.querySelector(".menu-toggle");
   var navigation = document.getElementById("primary-nav");
   var year = document.getElementById("year");
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>'"]/g, function (character) {
@@ -463,6 +464,84 @@
     return symbols[name] || "&#10022;";
   }
 
+  function assignReveal(selector, effect, step) {
+    document.querySelectorAll(selector).forEach(function (element, index) {
+      element.setAttribute("data-reveal", effect || "up");
+      if (step) element.style.setProperty("--reveal-delay", (index * step) + "ms");
+    });
+  }
+
+  function initScrollReveal() {
+    var items = document.querySelectorAll("[data-reveal]");
+    if (!items.length) return;
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      items.forEach(function (item) { item.classList.add("is-visible"); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -10% 0px" });
+    items.forEach(function (item) { observer.observe(item); });
+  }
+
+  function initParallax() {
+    var items = document.querySelectorAll("[data-parallax]");
+    if (!items.length || prefersReducedMotion) return;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var viewportHeight = window.innerHeight || 1;
+      items.forEach(function (item) {
+        var rect = item.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > viewportHeight) return;
+        var center = rect.top + (rect.height / 2);
+        var distance = (center - viewportHeight / 2) / viewportHeight;
+        item.style.setProperty("--parallax-y", (distance * -18).toFixed(2) + "px");
+      });
+    }
+
+    function queue() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    update();
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+  }
+
+  function setStructuredData(product, canonicalUrl, socialImageUrl, summaryDescription) {
+    var script = document.getElementById("product-structured-data");
+    if (!script) return;
+    var data = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": product.title,
+      "brand": {
+        "@type": "Brand",
+        "name": "Prime Pet Family"
+      },
+      "description": summaryDescription,
+      "url": canonicalUrl,
+      "image": [socialImageUrl],
+      "category": product.pet + " food",
+      "additionalProperty": product.specs.map(function (item) {
+        return {
+          "@type": "PropertyValue",
+          "name": item[0],
+          "value": item[1]
+        };
+      })
+    };
+    script.textContent = JSON.stringify(data, null, 2);
+  }
+
   function productLink(id, product) {
     return '<a class="related-product" href="product.html?id=' + encodeURIComponent(id) + '"><span>' + escapeHtml(product.pet) + '</span><strong>' + escapeHtml(product.title) + '</strong><em>View product &rarr;</em></a>';
   }
@@ -497,7 +576,25 @@
       return '<article class="care-card"><strong>' + escapeHtml(item[0]) + '</strong><p>' + escapeHtml(item[1]) + '</p></article>';
     }).join("");
 
+    var summaryDescription = product.summary + " Explore ingredients, benefits, and feeding guidance from Prime Pet Family.";
+    var canonicalUrl = "https://primepetfamily.com/product.html?id=" + encodeURIComponent(id);
+    var socialImageUrl = "https://primepetfamily.com/" + product.productImage.replace(/^\.?\//, "");
+
     document.title = product.title + " | Prime Pet Family";
+    var descriptionMeta = document.getElementById("page-description");
+    if (descriptionMeta) descriptionMeta.setAttribute("content", summaryDescription);
+    var canonicalLink = document.getElementById("page-canonical");
+    if (canonicalLink) canonicalLink.setAttribute("href", canonicalUrl);
+    var ogTitle = document.getElementById("og-title");
+    if (ogTitle) ogTitle.setAttribute("content", product.title + " | Prime Pet Family");
+    var ogDescription = document.getElementById("og-description");
+    if (ogDescription) ogDescription.setAttribute("content", summaryDescription);
+    var ogUrl = document.getElementById("og-url");
+    if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
+    var ogImage = document.getElementById("og-image");
+    if (ogImage) ogImage.setAttribute("content", socialImageUrl);
+    setStructuredData(product, canonicalUrl, socialImageUrl, summaryDescription);
+
     app.innerHTML = [
       '<section class="detail-hero detail-theme-' + product.theme + '">',
         '<div class="detail-product-visual"><div class="detail-ring"></div><img src="' + product.productImage + '" alt="' + escapeHtml(product.productAlt) + '"></div>',
@@ -539,6 +636,10 @@
         renderList(product.benefits, "benefit-detail-grid", function (item, index) { return '<article><div class="benefit-mark" aria-hidden="true">' + symbolFor(product.benefitIcons[index]) + '</div><h3>' + escapeHtml(item[0]) + '</h3><p>' + escapeHtml(item[1]) + '</p></article>'; }) +
       '</section>',
 
+      '<section class="detail-section trust-panel-section" aria-labelledby="trust-panel-title"><div class="detail-heading"><p class="eyebrow">Trust and transparency</p><h2 id="trust-panel-title">What Prime shows clearly on every product page.</h2><p>We want families to see the real pack, understand the support story, and know where final feeding guidance should come from.</p></div><div class="trust-panel-grid"><article><strong>Real pack visuals</strong><p>Original packaging artwork is shown on the page so labels, size cues, and branding stay recognizable.</p></article><article><strong>Pack-led ingredient summaries</strong><p>Ingredient highlights and benefits are written from supplied packaging details, then simplified for easier reading online.</p></article><article><strong>Final guidance comes from the bag or can</strong><p>Use the current package in hand as the final source for ingredients, feeding amounts, storage, and life-stage suitability.</p></article><article><strong>Help is one email away</strong><p>If families need clarification about product fit, flavour choice, or transition routines, they can contact Prime directly.</p></article></div></section>',
+
+      '<section class="detail-section" aria-labelledby="support-cta-title"><div class="support-cta-panel"><div><p class="eyebrow">Still comparing options?</p><h3 id="support-cta-title">Ask Prime before you buy the first bag or can.</h3><p>If you are unsure about flavour, pack size, transition pace, or whether this format fits your pet&#39;s routine, it is better to ask early and start with a calmer plan.</p></div><div><ul class="support-cta-list"><li>Share your pet&#39;s age, body size, and current food.</li><li>Tell Prime whether you want dry, canned, or freeze-dried support.</li><li>Ask about gentle switching if your pet has a sensitive stomach or picky appetite.</li></ul><div class="detail-actions"><a class="button button-blue" href="mailto:info@primepetfamily.com?subject=' + subject + '&body=' + body + '">Email Prime about this recipe</a></div></div></div></section>',
+
       '<section class="detail-section feeding-detail" aria-labelledby="feeding-detail-title"><div><p class="eyebrow">Serve with care</p><h2 id="feeding-detail-title">A better bowl starts with the right amount.</h2><p>' + escapeHtml(product.feedingIntro) + '</p></div><ol>' + product.feeding.map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; }).join("") + '</ol><div class="care-grid">' + careNotes + '</div></section>',
 
       '<section class="detail-section detail-faq" aria-labelledby="detail-faq-title"><div class="detail-heading"><p class="eyebrow">Before you serve</p><h2 id="detail-faq-title">Common questions.</h2></div><div class="faq-list">' + product.faqs.map(function (item) { return '<details><summary>' + escapeHtml(item[0]) + '<span>+</span></summary><p>' + escapeHtml(item[1]) + '</p></details>'; }).join("") + '</div></section>',
@@ -552,6 +653,34 @@
   var requestedId = new URLSearchParams(window.location.search).get("id") || "cat-classic";
   var selectedProduct = products[requestedId] || products["cat-classic"];
   renderProduct(products[requestedId] ? requestedId : "cat-classic", selectedProduct);
+
+  assignReveal(".detail-product-visual", "left");
+  assignReveal(".detail-hero-copy > *", "soft", 60);
+  assignReveal(".gallery-card", "up", 60);
+  assignReveal(".selling-point", "up", 60);
+  assignReveal(".spec-card", "up", 60);
+  assignReveal(".fit-card", "up", 60);
+  assignReveal(".advantage-grid article", "up", 60);
+  assignReveal(".result-card", "up", 70);
+  assignReveal(".ingredient-photo", "left");
+  assignReveal(".ingredient-highlight", "up", 60);
+  assignReveal(".ingredient-grid article", "up", 50);
+  assignReveal(".detail-lifestyle figcaption > *", "soft", 60);
+  assignReveal(".benefit-detail-grid article", "up", 60);
+  assignReveal(".trust-panel-grid article", "up", 60);
+  assignReveal(".support-cta-panel > *", "soft", 60);
+  assignReveal(".feeding-detail > *", "soft", 60);
+  assignReveal(".care-card", "up", 50);
+  assignReveal(".detail-faq details", "soft", 45);
+  assignReveal(".related-product", "up", 60);
+  assignReveal(".site-footer > div:not(.copyright)", "soft", 50);
+
+  document.querySelectorAll(".ingredient-photo img, .result-card img, .scene-background").forEach(function (image) {
+    image.setAttribute("data-parallax", "");
+  });
+
+  initScrollReveal();
+  initParallax();
 
   if (year) year.textContent = new Date().getFullYear();
 
