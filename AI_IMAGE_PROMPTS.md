@@ -37,3 +37,15 @@ Photorealistic wide image of a healthy golden retriever puppy in a safe first-da
 ### `assets/care-hydration.jpg`
 
 Photorealistic wide image of a healthy tabby cat and friendly dog using separate clean water bowls beside a pet fountain in a bright indoor-outdoor family space. Fresh, cool mood; no food, packages, branding, text, watermark, collars, or extra animals.
+
+### `assets/care-pet-introduction.png` / `assets/care-pet-introduction-web.jpg`
+
+Photorealistic wide editorial image of a calm adult golden retriever and a tabby cat on opposite sides of a baby gate in a bright cream-and-wood family home hallway. Both animals look relaxed and curious, not aggressive. Warm natural daylight; no people, packages, branding, text, or distress.
+
+### `assets/care-parasite-prevention.png` / `assets/care-parasite-prevention-web.jpg`
+
+Photorealistic wide editorial image of a pet owner gently combing a healthy medium-sized dog's coat on a patio in soft morning light, with a small organized tray of pet-safe grooming tools nearby. Calm preventive-care mood; no product packaging, branding, text, watermark, or visible parasites.
+
+### `assets/care-cat-grooming.png` / `assets/care-cat-grooming-web.jpg`
+
+Photorealistic wide editorial image of a calm long-haired cat sitting on a soft mat while being gently brushed with a slicker brush in a bright quiet home grooming corner. Clean towels and tools arranged neatly nearby; no people, packages, branding, text, or distress.
