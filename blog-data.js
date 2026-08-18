@@ -481,6 +481,171 @@
       product: { text: "PRIME Pet Family is proudly Cambodian-owned and presents supplied packaging, product comparisons, feeding notes, and responsible cautions across this website.", href: "index.html#why-prime", label: "See why families trust PRIME" },
       source: "https://wsava.org/wp-content/uploads/2021/04/Selecting-a-pet-food-for-your-pet-updated-2021_WSAVA-Global-Nutrition-Toolkit.pdf",
       sourceLabel: "WSAVA: Selecting a Pet Food for Your Pet"
+    },
+    {
+      slug: "introduce-new-pet-safely",
+      title: "How to introduce a new pet without turning mealtimes into a battle",
+      excerpt: "Use scent swapping, visual barriers, separate resources, and measured meals to help resident and newcomer pets settle in safely.",
+      category: "Family life",
+      date: "2026-08-18",
+      readTime: "7 min",
+      image: "assets/care-pet-introduction-web.jpg",
+      imageAlt: "Dog and cat calmly separated by a baby gate in a bright family home",
+      intro: "Bringing a second cat or dog home can feel exciting for people and overwhelming for the animals already living there. Territory, scent, food, resting places, and attention all matter. A rushed introduction often creates fear, guarding, or fights that could have been avoided with a slower plan. The goal is not friendship on day one. The goal is a sequence of small successes: each animal eating comfortably, resting without constant vigilance, and gradually learning that the other's presence predicts calm rather than loss. Mealtimes are a useful test because they reveal stress quickly. If one animal cannot eat near the other, the introduction is moving too fast. This guide walks through a practical multi-week approach families can adapt for cat-to-cat, dog-to-dog, or cat-and-dog households. Adjust timing to your pets; some confident animals progress faster, while others need extra patience after prior trauma or limited social experience.",
+      sections: [
+        {
+          heading: "Start with scent before sight",
+          text: "Before the newcomer enters shared space, exchange bedding, toys, or a soft cloth rubbed gently on each animal's cheeks and flanks. Place the item near the resident pet's resting area and watch the reaction. Hissing, avoidance, or prolonged sniffing with tension tells you to wait. Calm investigation or indifference is a better sign. Keep the newcomer in a separate room with its own litter tray or toilet area, bed, water, and measured food. The resident pet should retain access to familiar routines in the rest of the home. This separation is not punishment. It prevents surprise encounters that can create lasting fear. Swap scents daily so both animals learn the other's smell in a controlled way. In multi-pet homes, introduce one relationship at a time when possible rather than presenting several new animals at once."
+        },
+        {
+          heading: "Use barriers to teach calm observation",
+          text: "Once scent swapping produces mild curiosity rather than intense alarm, allow brief visual contact through a closed door gap, a tall baby gate, or a crate at a comfortable distance. Both animals should be able to retreat. Keep sessions short and end while things are still calm. Reward relaxed body language: loose posture, soft ears, normal breathing, and the choice to look away. Do not force nose-to-nose meetings. Staring, stiff posture, raised hackles, growling, or blocking doorways means increase distance and slow down. For dogs, use leashes indoors so you can create space without grabbing collars. For cats, stacked vertical space and separate exit routes reduce the feeling of being trapped. Repeat these controlled sightings daily until both animals can notice each other without fixating for several minutes.",
+          bullets: [
+            "Keep first sessions to a few minutes and finish before tension rises.",
+            "Feed both animals on opposite sides of a closed door or gate so eating becomes paired with a safe distance.",
+            "Increase proximity only when meals are eaten normally and body language stays relaxed.",
+            "Give each animal a private resting area the other cannot enter.",
+            "Avoid letting the resident pet 'discipline' the newcomer through chasing or fighting."
+          ]
+        },
+        {
+          heading: "Separate bowls, separate schedules, separate information",
+          text: "Shared feeding is one of the fastest ways to create competition. Assign each animal its own bowl in a consistent location, measured portion, and mealtime. In mixed-species homes, place cat food where a dog cannot reach it and give cats vertical escape routes during dog mealtimes. Supervise every shared-space meal at first. Remove bowls when finished so leftover food does not become a resource to guard. Record who ate what. Appetite change is an early stress signal. If the resident pet stops eating or the newcomer hides and refuses food, pause introductions and consult a veterinarian to rule out illness before pushing forward. Treats during training should be counted within the daily ration when possible so extras do not distort appetite or body condition."
+        },
+        {
+          heading: "Expand territory in stages, not all at once",
+          text: "When visual sessions through a barrier look steady, allow supervised time in a larger shared area while the newcomer still has a safe room to return to. Pick a time when both animals are rested, not right after a long journey or veterinary visit. Remove items that trigger guarding: high-value chews, certain beds, or toys that caused tension in earlier sessions. Keep sessions short and positive. Gradually increase duration as resting, grooming, and play return to normal patterns. In cat households, provide one more litter tray than the number of cats, spread trays in separate locations, and keep trays away from food and water. In dog households, separate crates or beds prevent one animal from monopolizing rest space. Never leave animals alone together until you have many calm supervised sessions and trust their body language."
+        },
+        {
+          heading: "Know when to pause and when to seek help",
+          text: "Some households integrate smoothly in days; others need weeks. Age, prior experience, health, and individual temperament all influence timing. Pause the plan if you see repeated fights, injuries, persistent hiding, loss of toilet training, severe appetite change, or one animal preventing another from reaching food, water, litter, or rest. A professional trainer or veterinary behaviourist can assess the setup and recommend adjustments. Medical pain can also look like aggression or fear, especially in older pets. Do not punish growling or hissing; those signals show the animal still has a warning system. Punishment often suppresses warnings while leaving the underlying fear intact.",
+          bullets: [
+            "Contact a veterinarian promptly for wounds, limping, or sudden behaviour change.",
+            "Separate fighting animals with a barrier or distraction, not your hands between them.",
+            "Restart at the last step that felt calm rather than repeating failed full-contact meetings.",
+            "Use pheromone diffusers or sprays only as an adjunct to management, not a substitute for spacing.",
+            "Tell guests and children the household rules so accidental door openings do not reset progress."
+          ]
+        },
+        {
+          heading: "Protect the long-term feeding routine",
+          text: "After introductions succeed, maintain separate measured meals and monthly body-condition checks. Relationships can shift when one animal ages, becomes ill, or when a third pet arrives. A household that once shared space peacefully may need temporary separation again during recovery or stress. Keeping feeding records makes those transitions easier because you already know each animal's normal intake. Consistency helps resident and newcomer pets feel that the basics—food, water, toilet access, and rest—remain reliable even when the family is busy. Revisit the introduction steps after moving house, long travel, or major household change."
+        }
+      ],
+      takeaway: "Seek veterinary help for injuries, repeated fights, complete food refusal, severe hiding, or signs of illness. Introduction stress and medical problems can look similar early on.",
+      product: { text: "Measured PRIME portions for each animal make it easier to spot appetite changes during introductions and to keep mealtimes fair in multi-pet homes.", href: "index.html#products", label: "Explore the PRIME range" },
+      source: "https://www.avma.org/resources-tools/pet-owners/petcare/socialization-dogs-and-cats",
+      sourceLabel: "AVMA: Socialization of Dogs and Cats"
+    },
+    {
+      slug: "home-parasite-prevention-routine",
+      title: "Parasite prevention at home: fleas, ticks, worms, and what families often miss",
+      excerpt: "Build a year-round prevention plan that covers the pet, the home, travel, and every family member's role.",
+      category: "Dog wellness",
+      date: "2026-08-18",
+      readTime: "7 min",
+      image: "assets/care-parasite-prevention-web.jpg",
+      imageAlt: "Pet owner gently combing a dog's coat during a home preventive-care routine",
+      intro: "Parasites are easy to underestimate because they are often invisible until itching, skin change, weight loss, or anaemia appears. Fleas, ticks, mites, and intestinal worms can affect both dogs and cats, and some parasites also pose risks to people—especially young children, older adults, and anyone with a weakened immune system. Prevention works best as a repeating household routine rather than a reaction after scratching starts. That routine includes the right veterinary product for each animal, environmental cleaning, observation during grooming, and realistic expectations about outdoor life in warm, humid climates. No food ingredient replaces prescription or veterinary-recommended preventives. Nutrition supports overall health, but parasite control needs its own plan. This article outlines what to schedule, what to inspect at home, and how to connect prevention with everyday feeding and grooming habits. Treat it as a checklist you review with your veterinary team at least once a year or whenever lifestyle changes.",
+      sections: [
+        {
+          heading: "Understand what you are preventing",
+          text: "Fleas cause itching, allergic skin disease, and can transmit tapeworms. Ticks attach to feed and may transmit serious infections depending on region and species. Intestinal worms such as roundworms and hookworms often produce subtle signs in adult pets but can be more serious in puppies, kittens, and young children exposed through contaminated soil or faeces. Heartworm, spread by mosquitoes in affected areas, damages the heart and lungs and requires professional prevention strategies. Not every product covers every parasite. Some treatments kill adult fleas; others interrupt the life cycle. Some dewormers target specific worms; others have broader coverage. Read labels with your veterinarian rather than assuming one collar, tablet, or spot-on does everything. Species matters too: a dog-only product can be dangerous for cats. When in doubt, ask before buying."
+        },
+        {
+          heading: "Build a calendar the whole family can follow",
+          text: "Write the preventive schedule where everyone sees it: product name, dose, date given, and which animal received it. Set phone reminders for monthly or quarterly treatments as directed. If one person forgets, another can step in. Puppies and kittens often need more frequent deworming early in life; adults move to a maintenance rhythm based on lifestyle and local risk. Outdoor animals, hunters, and pets that contact wildlife may need more frequent tick checks and veterinary review. Indoor-only cats still deserve a plan because fleas and worms can enter on shoes, other pets, or rodents. When travel changes climate or parasite exposure, ask whether the current product remains appropriate before departure.",
+          bullets: [
+            "Record the exact product and dose on the calendar, not just 'flea treatment'.",
+            "Weigh growing puppies and kittens so doses stay accurate.",
+            "Never split one large-animal dose between two pets without veterinary instruction.",
+            "Keep products in original packaging with batch details in case of questions.",
+            "Tell the veterinary team about every animal in the home, including cats if mainly dog products are discussed."
+          ]
+        },
+        {
+          heading: "Make grooming a weekly inspection, not only a bath",
+          text: "Once a week, part the coat with your fingers or a fine comb and look at skin, ears, paws, armpits, groin, and tail base. Fleas may appear as fast-moving dark specks or leave reddish-brown flea dirt that turns red on damp white paper. Ticks can feel like small bumps; remove them with proper technique or ask a professional rather than crushing or burning them. Ear scratching, head shaking, hair loss, redness, or a sudden odour can indicate mites, infection, or allergy and deserves examination. Long-coated and thick-coated dogs need section-by-section checks. Cats may tolerate brief sessions better when started young and kept predictable. Pair inspection with calm handling so the pet learns that touch is normal rather than alarming. Note any changes in a simple log."
+        },
+        {
+          heading: "Treat the environment when fleas are active",
+          text: "Adult fleas on the pet are only part of the problem. Eggs, larvae, and pupae can persist in bedding, carpets, cracks, and furniture. Wash pet bedding at a hot temperature, vacuum thoroughly including edges and furniture, and discard vacuum contents promptly in an outdoor bin. Treat all susceptible pets in the home at the same time; treating only one animal often fails. Ask your veterinarian how long to repeat environmental steps because flea life cycles can take weeks to break. Avoid mixing multiple strong products without guidance, especially when one pet is a cat. Indoor sprays and foggers require careful label reading for species safety and re-entry times."
+        },
+        {
+          heading: "Connect nutrition, stool checks, and veterinary faecal testing",
+          text: "Complete diets support immune function and skin health, but they do not automatically eliminate worms. Watch stool quality and appetite as part of routine care. Puppies with pot bellies, poor growth, or pale gums need prompt assessment. Some worms are microscopic; intermittent veterinary faecal tests detect burdens that home observation misses. When changing food, keep parasite prevention on schedule rather than pausing everything at once. That way, if digestive signs appear, you can tell whether diet or parasites might be involved. Store dry food sealed and off the floor so it does not attract pests that carry other problems."
+        },
+        {
+          heading: "Protect people as well as pets",
+          text: "Pick up faeces promptly, wash hands after handling pets or cleaning litter, and keep sandpits covered when not in use. Teach children not to kiss pets on the mouth or touch soil then eat without washing. Bare feet in yards where dogs toilet increases exposure risk. If a family member develops unexplained skin lesions, eye irritation, or digestive illness alongside pet parasite signs, mention pets to the human healthcare team. Public-health guidance varies by region; your veterinarian can explain local priorities for Cambodia and travel destinations. Prevention is most effective when every adult in the household understands the same basic rules.",
+          bullets: [
+            "Dispose of cat litter and dog waste safely and away from food preparation areas.",
+            "Use gloves when cleaning areas heavily soiled by diarrhoea.",
+            "Keep stray or untreated neighbourhood animals in mind when assessing risk.",
+            "Ask about prevention before boarding, grooming visits, or multi-pet events.",
+            "Report product side effects to your veterinarian and the manufacturer as directed."
+          ]
+        }
+      ],
+      takeaway: "Heavy flea infestation, tick attachment near the eyes or in the mouth, weakness, pale gums, persistent diarrhoea, or sudden weight loss needs veterinary assessment—not only another over-the-counter product. Keep emergency clinic numbers saved before travel or holiday weekends.",
+      product: { text: "PRIME supports everyday nutrition and skin health within a complete care plan, but parasite prevention should follow your veterinarian's product and testing schedule. Store food sealed and clean feeding areas to reduce pest attraction.", href: "product.html?id=dog-freeze", label: "Review PRIME Dog nutrition" },
+      source: "https://www.avma.org/resources-tools/pet-owners/petcare/external-parasites",
+      sourceLabel: "AVMA: External Parasites"
+    },
+    {
+      slug: "calm-cat-grooming-at-home",
+      title: "A calm at-home grooming routine for cats: coat, claws, ears, and when to stop",
+      excerpt: "Short, predictable sessions protect skin, reduce mats, and make veterinary exams easier—without turning grooming into a fight.",
+      category: "Cat care",
+      date: "2026-08-18",
+      readTime: "7 min",
+      image: "assets/care-cat-grooming-web.jpg",
+      imageAlt: "Long-haired cat being gently brushed on a soft mat in a quiet home corner",
+      intro: "Cats are skilled self-groomers, but many still benefit from human help—especially long-haired breeds, seniors with reduced flexibility, overweight cats that cannot reach comfortably, and indoor cats shedding heavily in warm weather. Grooming at home is not only about appearance. It is a regular chance to feel lumps, fleas, sore skin, weight change, and matting before they become emergencies. The biggest mistake families make is waiting until the coat is tangled and then attempting one long stressful session. Cats remember fear easily. A better approach uses brief, predictable contact several times a week, always ending before the cat wants to escape. This guide explains how to choose tools, read body language, handle claws and ears safely, and decide when home care is enough versus when a veterinarian or professional groomer should take over. Even cats that dislike brushing can often accept one small step at a time when the routine stays gentle and consistent.",
+      sections: [
+        {
+          heading: "Set up a grooming station that feels safe",
+          text: "Choose a quiet surface with traction: a rubber mat on a table, a stable lap with a towel, or the cat's preferred elevated perch. Gather tools before you start so you do not leave the cat unattended mid-session. Good basics include a wide-tooth comb, a slicker or pin brush suited to coat length, nail clippers designed for cats, cotton pads, and a pet-safe ear cleaner only if your veterinarian recommends it. Avoid strong fragrances that may overwhelm a cat's sensitive nose. Schedule grooming when the cat is naturally calm—after a meal or play session, not during active hunting time or when visitors are noisy. In multi-cat homes, groom one cat away from others so competition does not add tension."
+        },
+        {
+          heading: "Read feline body language and respect the stop signal",
+          text: "A cat that is comfortable may knead, purr softly, or simply remain loose. Stress signs include flattened ears, twitching tail tip, skin rippling, sudden stillness, dilated pupils, growling, or swatting. Stop at the first clear 'no' and try again later with a shorter session. Forcing contact teaches the cat that grooming predicts restraint, which makes the next attempt harder. Pair brief handling with something pleasant when appropriate: a few licks of a measured treat, gentle praise, or a favourite blanket. Over weeks, many cats tolerate longer brushing as predictability builds. Kittens introduced gradually often accept handling better than adults with no prior routine, but adult cats can still learn with patience.",
+          bullets: [
+            "Keep first sessions under two minutes and end while the cat is still calm.",
+            "Brush in the direction the coat grows, working in small sections.",
+            "Pause if the cat watches your hand with rigid focus or tries to bite the comb.",
+            "Never punish swatting; increase distance and shorten the next session instead.",
+            "Record which tools and times of day work best for your individual cat."
+          ]
+        },
+        {
+          heading: "Match technique to coat type",
+          text: "Short-haired cats usually need light weekly brushing to remove loose hair and distribute skin oils. Medium and long coats benefit from more frequent combing, especially behind ears, armpits, chest, belly, and thighs where mats form quietly. Start with a wide-tooth comb to detangle, then finish with a softer brush. Hold the hair below a knot gently so pulling does not tug skin. Small mats may be teased apart; tight mats against skin need professional help rather than scissors at home. Seasonal shedding in warm climates can temporarily increase brushing frequency. Regular removal of loose coat may also reduce hairballs, though vomiting still deserves veterinary attention when frequent or accompanied by lethargy. A soft brush after combing helps distribute natural oils for a healthy shine."
+        },
+        {
+          heading: "Trim claws with a clear light source and tiny cuts",
+          text: "Indoor cats often need nail trims every few weeks because they wear down less than outdoor cats. Use cat-specific clippers and good light. Press the paw pad gently to extend the nail and identify the pink quick—cut only the curved clear tip. If you clip the quick, apply gentle pressure with a clean cloth; styptic powder helps if you have it. One or two nails per session is acceptable while learning. Trim after resting, not during play. Providing legal scratching surfaces at appropriate heights reduces furniture damage and keeps nails healthier between trims. Declaw surgery removes bone and is widely discouraged; ask your veterinarian about humane alternatives if scratching is a concern."
+        },
+        {
+          heading: "Handle ears, eyes, and teeth with veterinary guidance",
+          text: "Healthy ears are generally clean and pale pink without strong odour. Do not probe deep canals with cotton swabs; that can push debris inward or injure tissue. If you see dark discharge, head shaking, redness, or a yeasty smell, schedule an examination before home cleaning. Eye discharge should be wiped gently with damp cotton from the inner corner outward using fresh material for each pass. Persistent tearing, squinting, or cloudiness needs professional assessment. Tooth brushing can help when introduced slowly with pet-specific paste, but bad breath, drooling, or difficulty eating may indicate dental disease requiring treatment beyond home care. Nutrition supports oral health but does not replace dental checks."
+        },
+        {
+          heading: "Know when home grooming is not enough",
+          text: "Call your veterinarian if you find wounds, parasites, sudden hair loss, open sores, painful mats, lumps, significant weight change, or if the cat stops grooming entirely—a sign cats may hide illness. Aggressive pain during handling can reflect arthritis, skin infection, or internal disease rather than a 'bad temperament'. Professional groomers experienced with cats can help when coat condition has deteriorated, but sedation should be veterinary-led when needed, not improvised at home. After veterinary treatment, restart gentle handling slowly so the cat does not associate touch only with clinic stress. Document what you find during grooming so the veterinary team receives clear information instead of vague descriptions.",
+          bullets: [
+            "Do not use human hair products, essential oils, or dog-only treatments on cats.",
+            "Seek help for matting that touches skin or covers large areas.",
+            "Senior cats may need softer tools and shorter sessions due to joint pain.",
+            "Overweight cats may need more frequent combing of areas they cannot reach.",
+            "Combine grooming notes with meal records so appetite and coat changes are seen together."
+          ]
+        }
+      ],
+      takeaway: "Sudden matting, bald patches, repeated vomiting of hair, mouth pain, ear odour, or a cat that hides and stops eating deserves veterinary attention—not only more brushing. Bring grooming notes to the appointment so changes over weeks are easier to describe.",
+      product: { text: "A complete PRIME diet supports skin and coat health as part of everyday care, while grooming handles what nutrition alone cannot remove from the coat.", href: "product.html?id=cat-classic", label: "Explore PRIME Cat Classic" },
+      source: "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/grooming-your-cat",
+      sourceLabel: "Cornell Feline Health Center: Grooming Your Cat"
     }
   ];
 })(window);
