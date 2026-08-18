@@ -99,6 +99,10 @@
 .blog-newsletter .button { flex: 0 0 auto; }
 
 .blog-post-main { background: #f7f9fb; }
+.blog-loading, .blog-load-message { max-width: 760px; margin: clamp(70px, 9vw, 130px) auto 100px; padding: 0 24px; color: #52677c; text-align: center; }
+.blog-load-message h1 { margin: 18px 0 16px; color: #073b82; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
+.blog-load-message p { margin: 0 auto 24px; max-width: 620px; font-size: 1.08rem; line-height: 1.7; }
+.blog-load-message .button { margin-top: 8px; }
 .blog-article { padding-bottom: 100px; }
 .blog-article-header { max-width: 1060px; margin: 0 auto; padding: clamp(70px, 9vw, 130px) 24px 46px; text-align: center; }
 .blog-back { display: inline-block; margin-bottom: 34px; color: var(--blue); font-weight: 800; text-decoration: none; }

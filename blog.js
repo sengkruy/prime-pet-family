@@ -79,12 +79,39 @@
     applyFilters();
   }
 
+  function renderLoadMessage(root, heading, message, actionHtml) {
+    root.innerHTML =
+      '<div class="blog-load-message">' +
+        '<a class="blog-back" href="blog.html">&larr; All articles</a>' +
+        '<h1>' + escapeHtml(heading) + '</h1>' +
+        '<p>' + escapeHtml(message) + '</p>' +
+        (actionHtml || "") +
+      '</div>';
+  }
+
   function renderPost() {
     var root = document.getElementById("blog-post-app");
     if (!root) return;
+    if (!posts.length) {
+      renderLoadMessage(
+        root,
+        "Article could not load",
+        "The blog data did not load. This usually clears after a hard refresh. If the problem continues, open the blog archive and choose the article again.",
+        '<a class="button button-blue" href="blog.html">Open the blog archive</a>'
+      );
+      return;
+    }
     var slug = new URLSearchParams(window.location.search).get("post");
-    var post = posts.find(function (item) { return item.slug === slug; }) || posts[0];
-    if (!post) return;
+    var post = slug ? posts.find(function (item) { return item.slug === slug; }) : posts[0];
+    if (!post) {
+      renderLoadMessage(
+        root,
+        "Article not found",
+        "That article link may be outdated or mistyped. Browse the full blog archive to find the guide you need.",
+        '<a class="button button-blue" href="blog.html">Browse all articles</a>'
+      );
+      return;
+    }
     var index = posts.indexOf(post);
     var previous = posts[index + 1];
     var next = posts[index - 1];
@@ -139,6 +166,19 @@
     document.head.appendChild(schema);
   }
 
-  renderArchive();
-  renderPost();
+  try {
+    renderArchive();
+    renderPost();
+  } catch (error) {
+    var root = document.getElementById("blog-post-app");
+    if (root) {
+      renderLoadMessage(
+        root,
+        "Something went wrong",
+        "The article page hit a loading error. Please refresh the page or return to the blog archive.",
+        '<a class="button button-blue" href="blog.html">Browse all articles</a>'
+      );
+    }
+    if (typeof console !== "undefined" && console.error) console.error(error);
+  }
 })();
