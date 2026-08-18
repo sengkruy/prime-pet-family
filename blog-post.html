@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="detail.css">
   <script src="page.js" defer></script>
-  <script src="blog-data.js" defer></script>
-  <script src="blog.js" defer></script>
+  <script src="blog-data.js?v=20260818" defer></script>
+  <script src="blog.js?v=20260818" defer></script>
 </head>
 <body class="detail-page blog-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -36,7 +36,15 @@
   </header>
 
   <main id="main" class="blog-post-main">
-    <div id="blog-post-app"></div>
+    <div id="blog-post-app">
+      <p class="blog-loading">Loading article&hellip;</p>
+    </div>
+    <noscript>
+      <div class="blog-load-message">
+        <h1>JavaScript is required</h1>
+        <p>This article page loads its content with JavaScript. Enable JavaScript, or open the <a href="blog.html">blog archive</a> and choose the article from there.</p>
+      </div>
+    </noscript>
   </main>
 
   <footer class="site-footer detail-footer">
